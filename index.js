@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cors()); // Use the cors middleware to enable CORS for all routes
 
 let ordersInfo = [];
-
+// code changed
 app.post('/orders', (req, res) => {
   const requestData = req.body;
    // Log the received data
