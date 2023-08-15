@@ -11,7 +11,7 @@ let ordersInfo = [];
 
 app.post('/orders', (req, res) => {
   const requestData = req.body;
-  console.log("Response sent.");
+  console.log("Response sent."); // chnages
   try {
     ordersInfo.push(requestData);
     fs.writeFileSync('orders.json', JSON.stringify(ordersInfo, null, 2), 'utf-8');
