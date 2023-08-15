@@ -25,7 +25,7 @@ app.post('/orders', (req, res) => {
     // Process requestData and respond accordingly
     ordersInfo.push(requestData);
     fs.writeFileSync('orders.json', JSON.stringify(ordersInfo, null, 2), 'utf-8');
-
+  
     res.status(200).json({ message: 'Order received successfully', data: requestData });
     console.log("Response sent.");
     console.log(requestData);
@@ -33,6 +33,7 @@ app.post('/orders', (req, res) => {
     console.error("Error processing request:", error);
     res.status(500).json({ message: 'Error processing request' });
   }
+  
 });
 
 app.get('/orders', (req, res) => {
