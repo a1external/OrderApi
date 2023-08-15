@@ -23,7 +23,7 @@ app.post('/orders', (req, res) => {
 
   try {
     // Process requestData and respond accordingly
-    ordersInfo.push(requestData);
+    orders.push(requestData);
     fs.writeFileSync('orders.json', JSON.stringify(ordersInfo, null, 2), 'utf-8');
   
     res.status(200).json({ message: 'Order received successfully', data: requestData });
